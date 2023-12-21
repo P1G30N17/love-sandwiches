@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-ENV PYTHON_VERSION 3.8.12
+ENV PYTHON_VERSION 3.9.18
 ENV DEBIAN_FRONTEND=noninteractive
 #Set of all dependencies needed for pyenv to work on Ubuntu
 RUN apt-get update \ 
@@ -8,7 +8,7 @@ RUN apt-get update \
 
 RUN curl https://cli-assets.heroku.com/install.sh | sh
 
-ARG USERNAME=codeany
+ARG USERNAME=cistudent
 RUN useradd -ms /bin/bash $USERNAME
 USER $USERNAME
 WORKDIR /home/$USERNAME
